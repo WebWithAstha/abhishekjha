@@ -64,9 +64,12 @@ tl.from(".center-h1 .h1 h1",{
 
 
 
-
 // ------------------PAGE2----------------------
 
+let screenWidth = document.querySelector("body").getBoundingClientRect().width
+console.log(screenWidth)
+
+if(screenWidth>1000){
 gsap.from(".img-box img",{
   rotate:-25,
   scrollTrigger:{
@@ -377,3 +380,5 @@ document.querySelector("#p6box2").addEventListener("mousemove",function(dets){
   img.style.left = dets.x +"px"
   img.style.top = dets.y +"px"
 })
+
+}
